@@ -14,12 +14,17 @@ struct TryPublish: Website {
     }
 
     // Update these properties to configure your website:
-    var url = URL(string: "https://your-website-url.com")!
-    var name = "TryPublish"
-    var description = "A description of TryPublish"
+    var url = URL(string: "https://weissazool.github.io/try-publish")!
+    var name = "Weissazool Dot Com"
+    var description = "Will it rise again?"
     var language: Language { .english }
     var imagePath: Path? { nil }
 }
 
-// This will generate your website using the built-in Foundation theme:
-try TryPublish().publish(withTheme: .foundation)
+
+try TryPublish().publish(using: [
+    // Generate the website using the built-in Foundation theme
+    .generateHTML(withTheme: .foundation),
+    // Deploy to Github Pages
+    .deploy(using: .gitHub("weissazool/try-publish"))
+])
