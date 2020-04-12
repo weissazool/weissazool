@@ -1,8 +1,13 @@
+---
+date: 2020-04-12 15:07
+description: What's this site for?
+---
 # Why
 
-## Why does this site exist?
+Why does this site exist?
 
-### Learning
+## Learning
+
 
 I used to play around with Jekyll to generate static sites from Markdown. I probably have a few public repositories of
 these here and there.
@@ -12,6 +17,6 @@ on a day-to-day basis. Although I must note that learning a templating tool (Liq
 SwiftGen. At any rate, generating static sites from Swift will allow me to play with something that is more relevant to
 what I want to be doing work-wise, so, two birds with one stone.
 
-### Fun
+## Fun
 
 I miss writing!
