@@ -6,7 +6,7 @@ import Plot
 struct TryPublish: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
-        case posts
+        case blog
         case projects
         case why
     }
@@ -25,6 +25,7 @@ struct TryPublish: Website {
 
 
 try TryPublish().publish(using: [
+    .addMarkdownFiles(),
     // Generate the website using the built-in Foundation theme
     .generateHTML(withTheme: .foundation),
     // Deploy to Github Pages
