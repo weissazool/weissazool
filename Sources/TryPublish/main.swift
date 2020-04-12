@@ -7,6 +7,8 @@ struct TryPublish: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
         case posts
+        case projects
+        case why
     }
 
     struct ItemMetadata: WebsiteItemMetadata {
