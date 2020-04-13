@@ -17,7 +17,7 @@ struct TryPublish: Website {
     // Update these properties to configure your website:
     var url = URL(string: "https://weissazool.github.io/try-publish")!
     var name = "Weissazool Dot Com"
-    var description = "Will it rise again?"
+    var description = "Dusting off my little corner of the internet"
     var language: Language { .english }
     var imagePath: Path? { nil }
 }
@@ -25,6 +25,7 @@ struct TryPublish: Website {
 
 try TryPublish().publish(using: [
     .addMarkdownFiles(),
+    .sortItems(by: \.date, order: .descending),
     .copyResources(),
     // Generate the website using the built-in Foundation theme
     .generateHTML(withTheme: .foundation),
