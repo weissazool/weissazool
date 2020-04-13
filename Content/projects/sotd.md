@@ -9,7 +9,7 @@ Shrine of the day. Which is a misnomer, since there may be temples as well. I am
 
 If I can think of a better name, I'll update it. Daily Religious Structure is terrifying. Today's Temple sounds preachy. Ideas welcome.
 
-My goal is for this to:
+Things this project gives me:
 
-- Give me a writing topic.
-- Force me to delve into my backlog of photos for source material, since I doubt I will be able to take the time every day to go out and find a new shrine.
+- Writing prompts.
+- Incentive to delve into and enjoy my backlog of photos while looking for source material.
