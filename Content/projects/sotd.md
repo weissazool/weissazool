@@ -12,5 +12,4 @@ If I can think of a better name, I'll update it. Daily Religious Structure is te
 My goal is for this to:
 
 - Give me a writing topic.
-- Force me to delve into my backlog of photos for source material, since I doubt I will be able to take the time every day to go out and
-find a new shrine.
+- Force me to delve into my backlog of photos for source material, since I doubt I will be able to take the time every day to go out and find a new shrine.
