@@ -25,10 +25,12 @@ struct TryPublish: Website {
 
 try TryPublish().publish(using: [
     .addMarkdownFiles(),
+    // Posts are in LIFO order
     .sortItems(by: \.date, order: .descending),
+    // Copy images to the output folder
     .copyResources(),
-    // Generate the website using the built-in Foundation theme
-    .generateHTML(withTheme: .foundation),
-    // Deploy to Github Pages
+    // Generate the website with my custom theme
+    .generateHTML(withTheme: .weissazool),
+    // Deploy to Github Pages -- ideally, in the future. There are some PRs for this.
     .deploy(using: .gitHub("weissazool/try-publish"))
 ])
