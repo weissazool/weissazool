@@ -137,6 +137,15 @@ a {
     margin-bottom: 40px;
 }
 
+.content img {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 400px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
 .browse-all {
     display: block;
     margin-bottom: 30px;
