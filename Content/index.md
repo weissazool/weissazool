@@ -1,1 +1,1 @@
-# Welcome to TryPublish!
+# Welcome to weissazool.com!

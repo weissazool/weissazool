@@ -3,16 +3,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "TryPublish",
+    name: "Weissazool",
     products: [
-        .executable(name: "TryPublish", targets: ["TryPublish"])
+        .executable(name: "Weissazool", targets: ["Weissazool"])
     ],
     dependencies: [
         .package(url: "https://github.com/johnsundell/publish.git", from: "0.3.0")
     ],
     targets: [
         .target(
-            name: "TryPublish",
+            name: "Weissazool",
             dependencies: ["Publish"]
         )
     ]

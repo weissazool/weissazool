@@ -8,7 +8,7 @@
 import Plot
 import Publish
 
-extension Theme where Site == TryPublish {
+extension Theme where Site == Weissazool {
     /// Modified from the default "Foundation" theme that Publish ships with, a very
     /// basic theme mostly implemented for demonstration purposes.
     static var weissazool: Self {

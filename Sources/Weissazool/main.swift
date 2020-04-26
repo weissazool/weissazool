@@ -3,7 +3,7 @@ import Publish
 import Plot
 
 // This type acts as the configuration for your website.
-struct TryPublish: Website {
+struct Weissazool: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
         case blog
@@ -23,7 +23,7 @@ struct TryPublish: Website {
 }
 
 
-try TryPublish().publish(using: [
+try Weissazool().publish(using: [
     .addMarkdownFiles(),
     // Posts are in LIFO order
     .sortItems(by: \.date, order: .descending),
