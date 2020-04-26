@@ -196,6 +196,9 @@ private extension Node where Context == HTML.BodyContext {
       .class("item-list"),
       .forEach(items) { item in
         .li(.article(
+          .unwrap(item.imagePath) {
+            .img(.src($0))
+          },
           .h1(.a(
             .href(item.path),
             .text(item.title)

@@ -98,7 +98,16 @@ a {
 }
 
 .item-list p {
-    margin-bottom: 0;
+/*    margin-bottom: 0;*/
+}
+
+.item-list img {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 150px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 0px;
 }
 
 .tag-list {
