@@ -137,8 +137,10 @@ a {
   margin-bottom: 40px;
 }
 
-.content img {
-  border: 1px solid #ddd;
+.content img, figure {
+  text-align: center;
+  font-style: italic;
+  text-decoration: none;
   border-radius: 10px;
   width: 400px;
   float: left;

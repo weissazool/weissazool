@@ -5,9 +5,11 @@ tags: SOTD
 image: ./../../sotd/shrine-image.jpeg
 ---
 
-[<img src="./../../sotd/shrine-image.jpeg"
-alt="Caption."
-/>](./../../sotd/shrine-image.jpeg)
+[<figure>
+  <img src="./../../sotd/shrine-image.jpeg"
+  alt="alt text"/>
+  <figcaption>Caption</figcaption>
+</figure>](./../../sotd/shrine-image.jpeg)
 
 # Shrine name
 
