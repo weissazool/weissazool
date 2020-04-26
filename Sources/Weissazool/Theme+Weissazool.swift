@@ -8,6 +8,9 @@
 import Plot
 import Publish
 
+// TODO: Move the theme into its own local package.
+// See https://github.com/JohnSundell/Publish/pull/69 for more information.
+
 extension Theme where Site == Weissazool {
   /// Modified from the default "Foundation" theme that Publish ships with, a very
   /// basic theme mostly implemented for demonstration purposes.
