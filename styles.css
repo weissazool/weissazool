@@ -146,6 +146,10 @@ a {
   margin-bottom: 20px;
 }
 
+.content p, li {
+  line-height: 1.3em;
+}
+
 .browse-all {
   display: block;
   margin-bottom: 30px;
