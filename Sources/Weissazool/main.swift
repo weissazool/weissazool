@@ -33,5 +33,5 @@ try Weissazool().publish(using: [
   .generateHTML(withTheme: .weissazool),
   // Deploy to Github Pages -- ideally, in the future. There are some PRs for this.
   // https://github.com/JohnSundell/Publish/pull/74
-  .deploy(using: .gitHub("weissazool/try-publish"))
+  .deploy(using: .gitHub("weissazool/weissazool"))
 ])
