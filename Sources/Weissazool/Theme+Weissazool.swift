@@ -17,18 +17,23 @@ extension Theme where Site == Weissazool {
   static var weissazool: Self {
     Theme(
       htmlFactory: WeissazoolHTMLFactory(),
-      // TODO: Move this into the Resources folder
-      resourcePaths: ["styles.css"]
+      resourcePaths: ["Resources/theme/styles.css"]
     )
   }
 }
 
 private struct WeissazoolHTMLFactory<Site: Website>: HTMLFactory {
+
+  func head(for location: Location, on site: Site) -> Node<HTML.DocumentContext> {
+    let stylesheetPath: Path = "/theme/styles.css"
+    return Node.head(for: location, on: site, stylesheetPaths: [stylesheetPath])
+  }
+
   func makeIndexHTML(for index: Index,
                      context: PublishingContext<Site>) throws -> HTML {
     HTML(
       .lang(context.site.language),
-      .head(for: index, on: context.site),
+      head(for: index, on: context.site),
       .body(
         .header(for: context, selectedSection: nil),
         .wrapper(
@@ -55,7 +60,7 @@ private struct WeissazoolHTMLFactory<Site: Website>: HTMLFactory {
                        context: PublishingContext<Site>) throws -> HTML {
     HTML(
       .lang(context.site.language),
-      .head(for: section, on: context.site),
+      head(for: section, on: context.site),
       .body(
         .header(for: context, selectedSection: section.id),
         .wrapper(
@@ -71,7 +76,7 @@ private struct WeissazoolHTMLFactory<Site: Website>: HTMLFactory {
                     context: PublishingContext<Site>) throws -> HTML {
     HTML(
       .lang(context.site.language),
-      .head(for: item, on: context.site),
+      head(for: item, on: context.site),
       .body(
         .class("item-page"),
         .header(for: context, selectedSection: item.sectionID),
@@ -94,7 +99,7 @@ private struct WeissazoolHTMLFactory<Site: Website>: HTMLFactory {
                     context: PublishingContext<Site>) throws -> HTML {
     HTML(
       .lang(context.site.language),
-      .head(for: page, on: context.site),
+      head(for: page, on: context.site),
       .body(
         .header(for: context, selectedSection: nil),
         .wrapper(.contentBody(page.body)),
@@ -107,7 +112,7 @@ private struct WeissazoolHTMLFactory<Site: Website>: HTMLFactory {
                        context: PublishingContext<Site>) throws -> HTML? {
     HTML(
       .lang(context.site.language),
-      .head(for: page, on: context.site),
+      head(for: page, on: context.site),
       .body(
         .header(for: context, selectedSection: nil),
         .wrapper(
@@ -134,7 +139,7 @@ private struct WeissazoolHTMLFactory<Site: Website>: HTMLFactory {
                           context: PublishingContext<Site>) throws -> HTML? {
     HTML(
       .lang(context.site.language),
-      .head(for: page, on: context.site),
+      head(for: page, on: context.site),
       .body(
         .header(for: context, selectedSection: nil),
         .wrapper(
