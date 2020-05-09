@@ -14,8 +14,8 @@ struct Weissazool: Website {
     // Add any site-specific metadata that you want to use here.
   }
   
-  // Update these properties to configure your website:
-  var url = URL(string: "https://weissazool.github.io/try-publish")!
+  // Website configuration
+  var url = URL(string: "https://weissazool.github.io/weissazool")!
   var name = "Weissazool Dot Com"
   var description = "Dusting off my little corner of the internet"
   var language: Language { .english }
