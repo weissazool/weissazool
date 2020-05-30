@@ -22,17 +22,7 @@ struct Weissazool: Website {
   var imagePath: Path? { nil }
 }
 
-try Weissazool().publish(withTheme: .weissazool)
-
-//try Weissazool().publish(using: [
-//  .addMarkdownFiles(),
-//  // Posts are in LIFO order
-//  .sortItems(by: \.date, order: .descending),
-//  // Copy images to the output folder
-//  .copyResources(),
-//  // Generate the website with my custom theme
-//  .generateHTML(withTheme: .weissazool),
-//  // Deploy to Github Pages -- ideally, in the future. There are some PRs for this.
-//  // https://github.com/JohnSundell/Publish/pull/74
-//  .deploy(using: .gitHub("weissazool/weissazool"))
-//])
+try Weissazool().publish(
+  withTheme: .weissazool,
+  deployedUsing: .gitHub("weissazool/weissazool.github.io", useSSH: false)
+)
