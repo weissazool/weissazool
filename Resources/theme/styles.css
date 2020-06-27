@@ -5,25 +5,27 @@
 */
 
 :root {
-  --snow: hsla(348, 2%, 99%, 1);
-  --flame: hsla(14, 86%, 93%, 1);
-  --black-coral: hsla(216, 14%, 42%, 1);
-  --dark-purple: hsla(295, 97%, 14%, 1);
-  --maximum-blue: hsla(196, 52%, 80%, 1);
 
-  --background-color: var(--maximum-blue);
-  --primary-item-color: var(--snow);
-  --secondary-item-color: var(--black-coral);
-  --primary-text-color: var(--dark-purple);
-  --secondary-text-color: var(--snow);
+/* Temple-colored palette...? */
+  --vermilion: #e90000ff;
+  --smoky-black: #120a02ff;
+  --magnolia: #f5f5ffff;
+  --gamboge: #d49705ff;
+  --almond: #f0e1ccff;
+
+  --background-color: var(--almond);
+  --primary-item-color: var(--magnolia);
+  --secondary-item-color: var(--vermilion);
+  --primary-text-color: var(--smoky-black);
+  --secondary-text-color: var(--magnolia);
 }
 
 @media (prefers-color-scheme: dark) {
-  --background-color: var(--dark-purple);
-  --primary-item-color: var(--black-coral);
-  --secondary-item-color: var(--maximum-blue);
-  --primary-text-color: var(--snow);
-  --secondary-text-color: var(--black-coral);
+  --background-color: var(--smoky-black);
+  --primary-item-color: var(--gamboge);
+  --secondary-item-color: var(--vermilion);
+  --primary-text-color: var(--magnolia);
+  --secondary-text-color: var(--gamboge);
 }
 
 * {
