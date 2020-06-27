@@ -8,7 +8,7 @@ let package = Package(
         .executable(name: "Weissazool", targets: ["Weissazool"])
     ],
     dependencies: [
-        .package(url: "https://github.com/johnsundell/publish.git", from: "0.3.0")
+        .package(url: "https://github.com/johnsundell/publish.git", from: "0.7.0")
     ],
     targets: [
         .target(
