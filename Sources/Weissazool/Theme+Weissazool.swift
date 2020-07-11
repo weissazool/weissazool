@@ -5,6 +5,7 @@
 //  Created by Anthony Weiss on 2020/4/13.
 //
 
+import Foundation
 import Plot
 import Publish
 
@@ -74,7 +75,9 @@ private struct WeissazoolHTMLFactory<Site: Website>: HTMLFactory {
   
   func makeItemHTML(for item: Item<Site>,
                     context: PublishingContext<Site>) throws -> HTML {
-    HTML(
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    return HTML(
       .lang(context.site.language),
       head(for: item, on: context.site),
       .body(
@@ -86,6 +89,7 @@ private struct WeissazoolHTMLFactory<Site: Website>: HTMLFactory {
               .class("content"),
               .contentBody(item.body)
             ),
+            .p(.text("Published \(formatter.string(from: item.date))")),
             .span("Tagged with: "),
             .tagList(for: item, on: context.site)
           )
@@ -197,6 +201,8 @@ private extension Node where Context == HTML.BodyContext {
   }
   
   static func itemList<T: Website>(for items: [Item<T>], on site: T) -> Node {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
     return .ul(
       .class("item-list"),
       .forEach(items) { item in
@@ -208,8 +214,9 @@ private extension Node where Context == HTML.BodyContext {
             .href(item.path),
             .text(item.title)
             )),
-          .tagList(for: item, on: site),
-          .p(.text(item.description))
+          .p(.text(item.description)),
+          .p(.text("Published \(formatter.string(from: item.date))")),
+          .tagList(for: item, on: site)
           ))
       }
     )
