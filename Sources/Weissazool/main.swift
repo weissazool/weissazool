@@ -17,7 +17,7 @@ struct Weissazool: Website {
   // Website configuration
   var url = URL(string: "https://weissazool.github.io/")!
   var name = "Weissazool Dot Com"
-  var description = "Dusting off my little corner of the internet"
+  var description = "It's just this site, you know?"
   var language: Language { .english }
   var imagePath: Path? { nil }
 }
